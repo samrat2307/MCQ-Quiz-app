@@ -3,34 +3,6 @@ const connection = require("../db");
 
 const databaseName = "users";
 
-// router.get("/", (req, res) => {
-//     try {
-//         const query = "SELECT * FROM " + databaseName;
-//         connection.query(query, (err, result) => {
-//             if (err) {
-//                 res.status(400).send(err.message);
-//                 return;
-//             }
-//             console.log(result);
-//             if (result) {
-//                 const arrayToSend = [];
-//                 for (let i = 0; i < result.length; i++) {
-//                     arrayToSend.push({
-//                         quiz_id: result[i].quiz_description,
-//                         quiz_description: result[i].quiz_description,
-//                         user_id: result[i].user_id
-//                     });
-//                 }
-//                 res.status(200).send(arrayToSend);
-//             } else {
-//                 res.status(200).send([]);
-//             }
-//         });
-//     } catch (err) {
-//         res.status(400).send(err.message);
-//     }
-// });
-
 router.post("/", (req, res) => {
     try {
         const query = "INSERT INTO " + databaseName + "(user_id ,password ,type ) VALUES(?,?,?)";
