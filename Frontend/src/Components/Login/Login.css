@@ -1,0 +1,14 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h2{
+  font-weight: x-large;
+}
+
+.loginBody {
+  margin: 80px;
+}
